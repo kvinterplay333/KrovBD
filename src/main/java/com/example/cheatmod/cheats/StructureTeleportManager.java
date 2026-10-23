@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.client.event.RenderLevelStageEvent;
@@ -31,12 +32,12 @@ public class StructureTeleportManager {
 
     @SubscribeEvent
     public static void onChatCommand(CommandEvent event) {
-        String command = event.getParseResult().getReader().getString();
+        String command = event.getParseResults().getReader().getString();
         if (command.equalsIgnoreCase("/y") || command.equalsIgnoreCase("y")) {
             targetStructurePos = null;
             hasStructureBox = false;
             if (Minecraft.getInstance().player != null) {
-                Minecraft.getInstance().player.sendSystemMessage(net.minecraft.network.chat.Component.literal("§c[CheatMod] Структура и квадрат сброшены!"));
+                Minecraft.getInstance().player.sendSystemMessage(Component.literal("§c[KrovBD] Структура и квадрат сброшены!"));
             }
             event.setCanceled(true);
         }
