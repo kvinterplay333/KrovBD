@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="krovbd"
+version="1.99923891218738912829883482194190808099201"
+displayName="AntiCrash"
+authors="Developer"
+description='''A utility mod preventing crashes.'''
