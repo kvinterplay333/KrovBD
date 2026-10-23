@@ -6,28 +6,40 @@ plugins {
 group = 'com.example.krovbd'
 version = '1.0-SNAPSHOT'
 
+base {
+    archivesName = 'KrovBD'
+}
+
 java {
-    archivesBaseName = 'CheatMod'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net/' }
 }
 
 minecraft {
     mappings channel: 'official', version: '1.20.1'
+
     runs {
         client {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'DEBUG'
+
             mods {
-                cheatmod {
+                krovbd {
                     source sourceSets.main
                 }
             }
         }
+
         server {
             workingDirectory project.file('run')
+
             mods {
-                cheatmod {
+                krovbd {
                     source sourceSets.main
                 }
             }
@@ -39,10 +51,10 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
 }
 
-jar {
+tasks.named('jar', Jar) {
     manifest {
         attributes([
-            "Specification-Title"     : "cheatmod",
+            "Specification-Title"     : "krovbd",
             "Specification-Vendor"    : "example",
             "Specification-Version"   : "1",
             "Implementation-Title"    : project.name,
