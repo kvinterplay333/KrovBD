@@ -7,9 +7,8 @@ group = 'com.example.krovbd'
 version = '1.0-SNAPSHOT'
 
 base {
-    archivesName = 'KrovBD'
+    archivesName = 'AntiCrash'
 }
-
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
