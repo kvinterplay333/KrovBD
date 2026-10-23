@@ -1,8 +1,9 @@
 plugins {
+    id 'java'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-group = 'com.example.cheatmod'
+group = 'com.example.krovbd'
 version = '1.0-SNAPSHOT'
 
 java {
