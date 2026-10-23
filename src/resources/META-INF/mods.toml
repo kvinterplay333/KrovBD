@@ -1,1 +1,10 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
 
+[[mods]]
+modId="cheatmod"
+version="1.0-SNAPSHOT"
+displayName="Ultimate Cheat Mod"
+authors="Kirill"
+description='''Custom Multiplayer Cheat Menu for 1.20.1'''
