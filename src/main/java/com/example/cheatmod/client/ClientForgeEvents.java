@@ -1,13 +1,12 @@
 package com.example.cheatmod.client;
 
-import com.example.cheatmod.CheatMod;
+import com.example.cheatmod.KrovBD;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = CheatMod.MOD_ID)
+@Mod.EventBusSubscriber(modid = KrovBD.MOD_ID)
 public class ClientForgeEvents {
 
     @SubscribeEvent
