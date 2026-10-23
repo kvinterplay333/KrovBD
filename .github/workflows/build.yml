@@ -26,7 +26,7 @@ jobs:
           gradle-version: '8.5'
 
       - name: Build Mod with Gradle
-        run: gradle jar --stacktrace
+        run: gradle build --stacktrace
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
