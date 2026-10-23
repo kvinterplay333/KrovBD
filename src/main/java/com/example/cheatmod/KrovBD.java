@@ -6,16 +6,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(CheatMod.MOD_ID)
-public class CheatMod {
-    public static final String MOD_ID = "cheatmod";
+@Mod(KrovBD.MOD_ID)
+public class KrovBD {
+    public static final String MOD_ID = "krovbd";
 
-    public CheatMod() {
+    public KrovBD() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        
-        // Регистрация клавиш
         modEventBus.addListener(KeyInit::registerBindings);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
